@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargar Firefox desde escritorio - con Mozilla</title>
+    <link rel="stylesheet" href="output.css">
+    <!-- fonts awesome -->
+    <script src="https://kit.fontawesome.com/311fb8a6ed.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-white dark:bg-slate-800 text-slate-800 dark:text-white transition-colors duration-300">
+
+    <!-- HEADER -->
+    <header>
+        <nav
+            class="z-30 bg-white dark:bg-slate-800 fixed w-full border-none shadow-lg  dark:border-none transition duration-300 lg:shadow-none">
+            <div class="p-6 container mx-auto">
+
+                <div class="flex justify-between items-center">
+                    <!-- logo -->
+                    <div class="z-40 w-3/5 order-1 flex-grow">
+                        <a href="#" class="flex items-center">
+                            <img src="img/firefox.png" alt="logo de firefox" class="size-12 sm:size-14">
+                            <span class="text-wrap text-2xl sm:text-3xl ml-3 flex flex-wrap"><span
+                                    class="font-bold">Firefox</span>Browser</span>
+                        </a>
+                    </div>
+
+
+                    <!-- Cuerpo de menu -->
+                    <div class="order-3 lg:order-2">
+                        <!-- boton responsive -->
+                        <input hidden type="checkbox" name="hamburger" id="hamburger" class="peer">
+                        <label for="hamburger"
+                            class="peer-checked:hamburger block z-20 lg:hidden transition p-5 hover:bg-gray-200 dark:hover:bg-slate-700 rounded">
+                            <div class="h-0.5 w-6 bg-black dark:bg-white transition"></div>
+                            <div class="h-0.5 w-6 mt-2 bg-black dark:bg-white transition"></div>
+                            <div class="h-0.5 w-6 mt-2 bg-black dark:bg-white transition"></div>
+                        </label>
+
+
+                        <!-- cuerpo de los enlaces -->
+                        <div
+                            class="w-4/6 shadow-lg flex flex-col bg-white dark:bg-slate-900 dark:lg:bg-slate-800 justify-between fixed inset-0 translate-x-[-100%] peer-checked:translate-x-0 transition-all duration-300 lg:w-auto lg:static lg:shadow-none lg:translate-x-0 lg:flex-row z-30">
+
+                            <!-- enlaces -->
+                            <div class="px-6 pt-32 flex flex-col lg:flex-row lg:items-center lg:p-0 gap-3">
+                                <a class="tracking-wide cursor-pointer px-3 py-2 rounded hover:text-white font-semibold text-lg hover:bg-blue-500"
+                                    href="#">Caracteristicas</a>
+                                <a class=" tracking-wide cursor-pointer px-3 py-2 rounded hover:text-white font-semibold text-lg hover:bg-yellow-400"
+                                    href="#">Ayuda</a>
+                                <a class="tracking-wide cursor-pointer px-3 py-2 rounded hover:text-white font-semibold text-lg hover:bg-indigo-500"
+                                    href="#">Componentes</a>
+                                <a class=" tracking-wide cursor-pointer px-3 py-2 rounded hover:text-white font-semibold text-lg hover:bg-pink-500"
+                                    href="#">Idiomas</a>
+                            </div>
+
+                            <!-- boton -->
+                            <div
+                                class="block lg:hidden border-t py-5 px-6 lg:border-t-0 dark:border-slate-700 lg:py-0 lg:pr-0 lg:pl-6 ">
+                                <a href="#"
+                                    class="block px-6 py-2 rounded text-center text-white text-lg font-semibold transition bg-blue-500 hover:bg-blue-400">Descargar</a>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- boton para cambiar el tema de la pagina -->
+                    <div class="sm:mr-4 lg:mr-0 lg:ml-6 order-2 lg:order-3">
+                        <button onclick="dark()" id="boton"
+                            class="focus:outline-none w-[40px] h-[40px] bg-slate-200 rounded-full dark:bg-slate-600  hover:scale-95 hover:dark:bg-slate-500 transition-all duration-300 overflow-hidden z-50 "><i
+                                class="fa-regular fa-lightbulb text-xl text-center"></i></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- FIN DEL HEADER -->
+
+    <!-- MAIN -->
+    <main class="relative md:pt-20 lg:pt-28">
+        <!-- HERO-->
+        <section
+            class="container mx-auto flex flex-col items-center md:flex-row md:justify-between px-5 md:py-24  pt-40 relative">
+            <!-- cuerpo de texto -->
+            <div
+                class="md:w-1/2 md:pr-16 md:pb-0 flex flex-col md:items-start md:text-left text-center items-center pb-5">
+                <!-- texto -->
+                <h1 class="lg:text-4xl text-3xl mb-4 font-bold">Obtén el navegador que protege lo que es importante</h1>
+                <p class="mb-8 leading-relaxed text-lg sm:pr-3 box-border">No hay políticas de privacidad sospechosas o
+                    puertas traseras para los anunciantes. Solo un navegador súper rápido que no te vende.</p>
+
+                <!-- botones -->
+                <div
+                    class="flex xl:flex-row md:flex-col flex-wrap w-full justify-center xl:justify-start gap-10 md:gap-0 ">
+                    <button class="btn-descarga">
+                        <img class="size-10" src="img/logo_windows.png" alt="logo de Windows">
+                        <span class="ml-4 flex items-start flex-col leading-none text-white">
+                            <span class="texto-xs uppercase">Instalar en</span>
+                            <span class="font-medium text-xl">Windows</span>
+                        </span>
+                    </button>
+
+                    <button class="btn-descarga xl:ml-4 md:mt-4 mt-0 xl:mt-0">
+                        <img class="size-10" src="img/apple-logo.png" alt="logo de Windows">
+                        <span class="ml-4 flex items-start flex-col leading-none text-white">
+                            <span class="texto-xs uppercase">Instalar en</span>
+                            <span class="font-medium text-xl">Mac OS</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <!-- imagen -->
+            <div class="block mt-10 sm:mt-0 lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                <img src="img/image_hero1.png" class="shadow-2xl object-cover object-center rounded">
+            </div>
+
+            <!-- svg de fondo -->
+            <img src="img/image_hero2.svg"
+                class="block absolute w-[90%] bottom-0 md:bottom-auto md:right-0 xl:w-1/2 lg:w-[60%] md:w-[55%] -z-10">
+        </section>
+        <!-- FIN DEL HERO -->
+
+        <!-- SECCION DE TITULO -->
+        <section class="container mx-auto py-12 sm:py-28 w-10/12 md-w:8/12">
+            <h2 class="sm:text-5xl text-3xl mb-4 font-bold text-center sm:px-6">Haz lo que haces en línea. Navegador
+                Firefox no te está mirando.
+            </h2>
+        </section>
+        <!-- FIN SECCION TITULO -->
+
+
+
+
+
+
+        <!-- SECCION INFO 1 -->
+        <section
+            class="w-full mx-auto py-10 container px-5 m-auto flex flex-col justify-center items-center lg:flex-row text-center md:text-left gap-9">
+
+            <!-- Contenedor del texto -->
+            <div
+                class="w-full py-4 xl:w-[40%] flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+                <h3 class="subtitle">Bloqueamos los rastreadores publicitarios. Por ello, exploras internet más rápido.
+                </h3>
+                <p class="text">La publicidad distrae y hace que las páginas web se carguen más lentamente, mientras que
+                    sus rastreadores observan cada movimiento que realizas en línea. Navegador Firefox bloquea la
+                    mayoría de los rastreadores automáticamente, por lo que no es necesario profundizar en los ajustes
+                    de seguridad.</p>
+            </div>
+
+            <!-- Contenedor de la imagen -->
+            <div class="w-full md:w-[80%] xl:w-[40%]">
+                <img class="w-full h-full object-cover" src="img/uno.jpg" alt="imagen de firefox">
+            </div>
+        </section>
+        <!-- FIN SECCION INFO 1 -->
+
+
+        <!-- SECCION DE INFORMACION DE DOS GRIDS -->
+        <section class="w-full sm py-10 container px-5 lg:px-10 m-auto flex flex-col justify-center items-center mt-16">
+
+            <!-- titulo de la secion -->
+            <div class="w-full h-auto md:mb-10">
+                <h2
+                    class="text-wrap w-full lg:w-[70%] mx-auto subtitle sm:pr-0 text-center md:text-[2.5rem] font-bold mb-12">
+                    Respaldado por la organización sin fines de lucro que prioriza a las personas</h2>
+            </div>
+
+            <!-- contenedor de las imagenes e informacion -->
+            <div class="w-full flex flex-col justify-center items-center sm:flex-row sm:justify-between">
+                <div
+                    class="w-full flex flex-col sm:w-[46%] justify-center items-center text-center sm:items-start sm:text-start ">
+                    <!-- Contenedor para la imagen -->
+                    <div class="w-full mt-7 flex justify-center items-center mb-6">
+                        <img class="w-[65%] sm:w-full lg:w-[80%] object-cover object-center" src="img/mitad1.png"
+                            alt="Trabajador de Firefox">
+                    </div>
+                    <!-- textos -->
+                    <h3 class="subtitle text-2xl font-bold mb-4">Desafiando el status quo desde 1998</h3>
+                    <p class="text lg:pr-0 w-full">Firefox fue creado por Mozilla como una alternativa más rápida y
+                        privada a navegadores como Internet Explorer, y ahora Chrome. Hoy en día, nuestra comunidad de
+                        voluntarios y empresas impulsadas por la misión continúan poniendo tu privacidad por sobre de
+                        todo.</p>
+                </div>
+
+
+                <!-- Segunda imagen con informacion -->
+                <div
+                    class="w-full flex sm:w-[46%] flex-col justify-center items-center text-center sm:items-start sm:text-start">
+                    <!-- Contenedor para la imagen -->
+                    <div class="w-full mt-7 flex justify-center items-center mb-6">
+                        <img class="w-[65%] sm:w-full lg:w-[80%] object-cover object-center" src="img/mitad2.png"
+                            alt="Firefox laptop">
+                    </div>
+                    <!-- textos -->
+                    <h3 class="subtitle text-2xl font-bold mb-4">Tu privacidad es lo primero</h3>
+                    <p class="text lg:pr-0 w-full">A medida que Internet crece y cambia, Firefox continúa enfocándose en
+                        tu derecho a la privacidad; lo llamamos la Promesa de datos personales: Recolecta menos. Lo
+                        mantiene seguro. Sin secretos. Tus datos, tu actividad web, tu vida en línea están protegidos
+                        con Firefox.</p>
+                </div>
+            </div>
+            <!-- Primera imagen con informacion -->
+
+
+        </section>
+
+        <!-- SECCION DE GRIDS -->
+        <section class="w-full md:w-[70%] py-10 container px-5 m-auto mt-16">
+            <!-- Titulo de la seccion -->
+            <div class="w-full flex justify-center items-center">
+                <h2 class="text-wrap w-full mx-auto subtitle sm:pr-0 text-center md:text-[2.5rem] font-bold mb-12">
+                    Mantén todas tus funcionalidades favoritas del navegador — y descubre nuevas.</h2>
+            </div>
+
+            <!-- Grid de la seccion -->
+            <div
+                class="mt-12 w-[80%] mx-auto sm:w-full grid grid-cols-1 sm:grid-rows-3 sm:grid-cols-2 grid-rows-1 lg:grid-cols-3 lg:grid-rows-2 gap-y-9 sm:gap-y-24 sm:gap-x-12">
+
+                <div class="card">
+                    <div class="w-full flex justify-center items-center sm:justify-start">
+                        <img src="img/grid1.svg">
+                    </div>
+                    <h4 class="subtitle mt-4 text-2xl font-bold mb-4">Funciona con los productos de Google</h4>
+                    <p class="text text-base lg:pr-0 w-full">Todas tus herramientas favoritas de Google (como Gmail y
+                        Docs)
+                        funcionan a la perfección en Navegador Firefox</p>
+                </div>
+
+                <div class="card">
+                    <div class="w-full flex justify-center items-center sm:justify-start">
+                        <img src="img/grid2.svg">
+                    </div>
+                    <h4 class="subtitle mt-4 text-2xl font-bold mb-4">Funciona con los productos de Google</h4>
+                    <p class="text text-base lg:pr-0 w-full">Todas tus herramientas favoritas de Google (como Gmail y
+                        Docs)
+                        funcionan a la perfección en Navegador Firefox</p>
+                </div>
+
+                <div class="card">
+                    <div class="w-full flex justify-center items-center sm:justify-start">
+                        <img src="img/grid3.svg">
+                    </div>
+                    <h4 class="subtitle mt-4 text-2xl font-bold mb-4">Funciona con los productos de Google</h4>
+                    <p class="text text-base lg:pr-0 w-full">Todas tus herramientas favoritas de Google (como Gmail y
+                        Docs)
+                        funcionan a la perfección en Navegador Firefox</p>
+                </div>
+
+                <div class="card">
+                    <div class="w-full flex justify-center items-center sm:justify-start">
+                        <img src="img/grid4.svg">
+                    </div>
+                    <h4 class="subtitle mt-4 text-2xl font-bold mb-4">Funciona con los productos de Google</h4>
+                    <p class="text text-base lg:pr-0 w-full">Todas tus herramientas favoritas de Google (como Gmail y
+                        Docs)
+                        funcionan a la perfección en Navegador Firefox</p>
+                </div>
+
+                <div class="card">
+                    <div class="w-full flex justify-center items-center sm:justify-start">
+                        <img src="img/grid5.svg">
+                    </div>
+                    <h4 class="subtitle mt-4 text-2xl font-bold mb-4">Funciona con los productos de Google</h4>
+                    <p class="text text-base lg:pr-0 w-full">Todas tus herramientas favoritas de Google (como Gmail y
+                        Docs)
+                        funcionan a la perfección en Navegador Firefox</p>
+                </div>
+
+                <div class="card">
+                    <div class="w-full flex justify-center items-center sm:justify-start">
+                        <img src="img/grid6.svg">
+                    </div>
+                    <h4 class="subtitle mt-4 text-2xl font-bold mb-4">Funciona con los productos de Google</h4>
+                    <p class="text text-base lg:pr-0 w-full">Todas tus herramientas favoritas de Google (como Gmail y
+                        Docs)
+                        funcionan a la perfección en Navegador Firefox</p>
+                </div>
+
+            </div>
+
+            <div class="mt-8 sm:mt-24 w-full flex flex-col justify-center items-center">
+                <button
+                    class="p-3 px-8 bg-blue-500 rounded-xl text-white font-bold hover:scale-95 hover:bg-blue-900 transition-all duration-300">Descarga
+                    Firefox</button>
+                <a href="#" class="text-sm mt-4 text-slate-600 no-underline hover:underline">
+                    Aviso de privacidad de Firefox
+                </a>
+            </div>
+        </section>
+        <!-- FIN SECCION DE GRIDS -->
+
+        <!-- SECCION DE INFO 2  -->
+        <section
+            class="w-full mx-auto py-10 container px-5 m-auto flex flex-col justify-center items-center sm:flex-row text-center sm::text-left gap-9">
+
+            <!-- Contenedor de la imagen -->
+            <div class="w-[70%] sm:w-[40%]">
+                <img class="w-full h-full object-cover" src="img/dos.svg" alt="imagen de firefox">
+            </div>
+
+            <!-- Contenedor del texto -->
+            <div
+                class="w-full py-4 sm:w-[40%] flex flex-col justify-center items-center sm:items-start text-center sm:text-left">
+                <h3 class="subtitle">Firefox es para todos
+                </h3>
+
+                <p class="text">Disponible en más de 90 idiomas, y compatible con equipos Windows, Mac y Linux, Firefox
+                    funciona sin importar qué estás usando o dónde estás. Asegúrate de que tu sistema operativo esté
+                    actualizado para obtener la mejor experiencia.</p>
+                <a href="#"
+                    class="text-blue-600 hover:text-blue-700 transition-all duration-300 text-base mt-6 underline hover:no-underline">Revisar
+                    los requisitos del sistema</a>
+            </div>
+        </section>
+        <!-- FIN DE SECCION DE INFO 2 -->
+
+        <!-- SECCION DE INFO 3 -->
+        <section
+            class="w-full mx-auto py-10 container px-5 m-auto flex flex-col justify-center items-center lg:flex-row text-center md:text-left gap-9">
+
+            <!-- Contenedor del texto -->
+            <div
+                class="w-full py-4 xl:w-[40%] flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+                <h3 class="subtitle">Instala Firefox en todos tus dispositivos
+                </h3>
+                <p class="text">Mantén tu privacidad en todas partes. Navegadores Firefox para iOS y Android tienen la
+                    misma configuración de privacidad sólida para evitar que los rastreadores te sigan por la web, sin
+                    importar dónde te encuentres.</p>
+            </div>
+
+            <!-- Contenedor de la imagen -->
+            <div class="w-full md:w-[80%] xl:w-[40%]">
+                <img class="w-full h-full object-cover" src="img/image_content3.png" alt="imagen de firefox">
+            </div>
+        </section>
+        <!-- FIN DE SECCION DE INFO 3 -->
+
+        <!-- SECCION GRID 3 -->
+        <section>
+            <h2 class="md:text-5xl text-4xl font-bold md:mt-11 md:mb-28 my-28 text-center mx-auto">Haz Firefox tuyo</h2>
+
+            <div class="flex flex-col px-5 pb-24 items-center">
+                <!-- contendeor imagen -->
+                <div class="relative w-full flex justify-center items-end">
+                    <img src="img/image_info1.png" alt=""
+                        class="w-4/5 md:w-[70%] h-1/5 mb-10 object-cover object-center rounded">
+
+                    <!-- svg de fondo -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute -z-10 w-[80%] md:w-[90%]"
+                        viewBox="0 0 1242 532">
+                        <path fill="none" stroke="#ffba2d" stroke-width="2"
+                            d="M1198.8 232.3c4.7 3 6.1 9.1 3.2 13.8l-.2.3c-2.8 4.5-1.3 10.4 3.2 13.2 4.6 2.8 10.5 1.5 13.4-2.9l.2-.3c3.1-4.7 9.4-6 14.2-3.1 4.8 3 6.3 9.3 3.3 14.1-8.9 14.1-27.8 18.3-42 9.5-14.3-8.8-18.7-27.4-9.8-41.4 3-4.7 9.3-6.2 14.1-3.3l.2.1h.2z">
+                        </path>
+                        <linearGradient id="a2" x1="1046.5737" x2="1180.3937" y1="142.2743" y2="50.0583"
+                            gradientTransform="matrix(1 0 0 -1 0 519.0001)" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#ffda65"></stop>
+                            <stop offset="1" stop-color="#ff9741"></stop>
+                        </linearGradient>
+                        <circle cx="1096.9" cy="411.4" r="120.5" fill="url(#a2)"></circle>
+                        <linearGradient id="b2" x1="-83.934" x2="122.2983" y1="-272.8492" y2="-30.4322"
+                            gradientTransform="matrix(.766 -.6428 -.6428 -.766 175.4476 172.2943)"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#c857f1"></stop>
+                            <stop offset="1" stop-color="#2ebffc"></stop>
+                        </linearGradient>
+                        <path fill="url(#b2)"
+                            d="M45.1 300.6l323-271C421.4-15.3 501-8.3 545.8 45.1l.2.2c44.8 53.4 37.8 132.9-15.5 177.7l-323 271C154 538.7 74.4 531.8 29.7 478.4l-.2-.2c-44.8-53.3-37.8-132.9 15.6-177.6z">
+                        </path>
+                        <path fill="none" stroke="#ff008b" stroke-width="2"
+                            d="M130.5 193.8L522.4 58.9c52.9-18.2 110.5 9.9 128.7 62.8h0c18.2 52.9-9.9 110.5-62.8 128.7L196.5 385.3c-52.9 18.2-110.5-9.9-128.7-62.8h0c-18.3-52.9 9.8-110.5 62.7-128.7z">
+                        </path>
+                        <circle cx="811.9" cy="81.2" r="12" fill="#ff008b"></circle>
+                        <linearGradient id="c2" x1="733.0189" x2="647.999" y1="-193.4654" y2="-16.5744"
+                            gradientTransform="scale(1 -1) rotate(32.997 1111.38555617 211.5247949)"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#f80089"></stop>
+                            <stop offset="1" stop-color="#b833e1"></stop>
+                        </linearGradient>
+                        <path fill="url(#c2)"
+                            d="M678 256.3L981.8 59.1c58.4-37.9 136.5-21.3 174.5 37.1l.1.2c37.9 58.4 21.3 136.5-37.1 174.5L815.5 468.1C757.1 506 679 489.4 641.1 431l-.1-.2c-38-58.4-21.4-136.5 37-174.5z">
+                        </path>
+                    </svg>
+                </div>
+
+                <!-- Contenedor de textos -->
+                <div
+                    class="xl:w-2/3 w-[90%] mx-auto px-8 lg:px-0 mt-5 md:mt-0 flex justify-center lg:flex-row flex-col items-center gap-10 sm:text-center lg:text-left">
+                    <div>
+                        <h3 class="sm:text-[25px] text-2xl mb-4 font-bold ">Extensiones para cada interés</h3>
+                        <p class="mb-8 leading-relaxed">Desde la seguridad hasta las noticias y los juegos, hay un
+                            complemento para todos. Agrega tantos como quieras hasta que tu navegador sea el adecuado
+                            para ti.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="sm:text-[25px] text-3xl mb-4 font-bold ">Cambia tu apariencia</h3>
+                        <p class="mb-8 leading-relaxed">Pasa del modo claro al modo oscuro según tu estado de ánimo o
+                            preferencia, o ameniza las cosas con un tema personalizado (¿quizás un unicornio arcoíris?).
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="sm:text-[25px] text-3xl mb-4 font-bold ">Realiza tus ajustes</h3>
+                        <p class="mb-8 leading-relaxed">No necesitas conformarte. Cambia la página que aparece al abrir
+                            nuevas pestañas, la barra de búsqueda, los marcadores y más para explorar internet de la
+                            manera que quieras.</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <!-- FIN SECCION GRID 3 -->
+
+        <!-- SEGUNDA SECCION DE INFORMAXION CON DOS GRIDS -->
+        <section class="w-full sm py-10 container px-5 lg:px-10 m-auto flex flex-col justify-center items-center mt-16">
+
+            <!-- titulo de la secion -->
+            <div class="w-full h-auto md:mb-10">
+                <h2
+                    class="text-wrap w-full lg:w-[70%] mx-auto subtitle sm:pr-0 text-center md:text-[2.5rem] font-bold mb-12">
+                    Apoyado por una ONG centrada en el bienestar humano.</h2>
+            </div>
+
+            <!-- contenedor de las imagenes e informacion -->
+            <div class="w-full flex flex-col justify-center items-center sm:flex-row sm:justify-between">
+                <div
+                    class="w-full flex flex-col sm:w-[46%] justify-center items-center text-center sm:items-start sm:text-start ">
+                    <!-- Contenedor para la imagen -->
+                    <div class="w-full mt-7 flex justify-center items-center mb-6">
+                        <img class="w-[65%] sm:w-full lg:w-[80%] object-cover object-center" src="img/image_info3.png"
+                            alt="Trabajador de Firefox">
+                    </div>
+                    <!-- textos -->
+                    <h3 class="subtitle text-2xl font-bold mb-4">Firefox: Rendimiento y seguridad sin compromisos.</h3>
+                    <p class="text lg:pr-0 w-full">Experimenta la excelencia con Firefox, donde el rendimiento
+                        optimizado ofrece una navegación sin igual. Navega con confianza y eficiencia, explorando la web
+                        con la garantía de un navegador que redefine los estándares tecnológicos.</p>
+                </div>
+
+
+                <!-- Segunda imagen con informacion -->
+                <div
+                    class="w-full flex sm:w-[46%] flex-col justify-center items-center text-center sm:items-start sm:text-start">
+                    <!-- Contenedor para la imagen -->
+                    <div class="w-full mt-7 flex justify-center items-center mb-6">
+                        <img class="w-[65%] sm:w-full lg:w-[80%] object-cover object-center" src="img/image_info2.png"
+                            alt="Firefox laptop">
+                    </div>
+                    <!-- textos -->
+                    <h3 class="subtitle text-2xl font-bold mb-4">Horizontes Digitales: Tu viaje hacia la innovación
+                        tecnológica.</h3>
+                    <p class="text lg:pr-0 w-full">Horizontes Digitales te invita a un viaje excepcional de innovación
+                        tecnológica. Explora tendencias vanguardistas y sumérgete en un mundo digital que redefine el
+                        futuro con cada clic.</p>
+                </div>
+            </div>
+            <!-- Primera imagen con informacion -->
+
+
+        </section>
+        <!-- SECCION DE INFORMACION DE DOS GRIDS -->
+
+        <!-- SECCION DE DESCARGA -->
+        <section
+            class="flex px-5 py-24 md:flex-row flex-col items-center justify-center bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700">
+
+            <!-- contenedor para imagen -->
+            <div class="hidden md:block lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                <img src="img/firefox.png" class="object-cover object-center w-full rounded ">
+            </div>
+            <div class="md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                <h2 class="lg:text-7xl text-5xl mb-8 font-semibold text-white">Disponible para moviles</h2>
+
+                <div class="flex flex-col md:flex-row flex-wrap gap-5 justify-center items-center md:justify-start">
+                    <button class="btn-descarga">
+                        <img class="size-10" src="img/google-play.png" alt="logo de Windows">
+                        <span class="ml-4 flex items-start flex-col leading-none text-white">
+                            <span class="texto-xs uppercase">Disponible en: </span>
+                            <span class="font-medium text-xl">Google Play</span>
+                        </span>
+                    </button>
+
+                    <button class="btn-descarga">
+                        <img class="size-10" src="img/apple-logo.png" alt="logo de Windows">
+                        <span class="ml-4 flex items-start flex-col leading-none text-white">
+                            <span class="texto-xs ">Consiguelo en el: </span>
+                            <span class="font-medium text-xl">App Store</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- FIN DE SECCION DE DESCARGA -->
+
+        <!-- FOOTER -->
+        <footer class="w-full">
+            <div
+                class="w-full bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 flex justify-center items-center space-x-6 pb-7">
+                <a href=""
+                    class="text-3xl text-white hover:text-slate-300 hover:scale-110 transition-all duration-300"><i
+                        class="fa-brands fa-twitter"></i></a>
+                <a href=""
+                    class="text-3xl text-white hover:text-slate-300 hover:scale-110 transition-all duration-300"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href=""
+                    class="text-3xl text-white hover:text-slate-300 hover:scale-110 transition-all duration-300"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href=""
+                    class="text-3xl text-white hover:text-slate-300 hover:scale-110 transition-all duration-300"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+
+            </div>
+        </footer>
+        <!-- FIN DEL FOOTER -->
+
+
+
+    </main>
+    <!-- FIN DEL MAIN -->
+
+    <!-- Agregando elementos de scripts -->
+    <script src="main.js"></script>
+</body>
+
+</html>

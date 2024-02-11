@@ -1,0 +1,37 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .hamburger div:first-child{
+        @apply rotate-45 translate-y-2.5
+    }
+
+    .hamburger div:nth-child(2){
+        @apply -translate-x-[50%] opacity-0
+    }
+
+    .hamburger div:nth-child(3){
+        @apply -rotate-45 -translate-y-2.5
+    }
+
+    .btn-descarga{
+        @apply bg-black py-8 pl-4 w-60 h-12 flex rounded-lg items-center focus:outline-none hover:scale-95 transition-all duration-300
+    }
+
+    .subtitle{
+        @apply text-slate-800 dark:text-white font-bold text-2xl sm:text-3xl lg:text-4xl md:pr-4 mb-6
+    }
+    .text{
+        @apply pr-0 lg:pr-[10%] text-wrap font-normal text-lg text-slate-700 dark:text-slate-200
+    }
+
+    .card{
+        @apply flex flex-col justify-center items-start hover:scale-95 transition-all duration-300
+    }
+
+    .card img{
+        @apply h-36 object-cover
+    }
+ }
